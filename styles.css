@@ -1,49 +1,187 @@
+/* Colors are defined once here so they are easy to change */
+:root {
+  --blue: #0b5cab;
+  --dark-blue: #08437d;
+  --light-blue: #e6f0fa;
+  --text: #1f2933;
+  --muted: #52606d;
+  --border: #cbd2d9;
+  --background: #f5f7fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  background-color: #f4f6f8;
-  color: #222;
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+  line-height: 1.5;
 }
 
-h1 {
-  margin-bottom: 20px;
-}
-
-.filters {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-input,
-select {
-  padding: 8px;
-  font-size: 14px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: white;
-}
-
-th,
-td {
-  padding: 10px;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-th {
-  background-color: #2f5d8a;
+.page-header {
+  background-color: var(--blue);
   color: white;
+  padding: 32px 20px;
+  text-align: center;
 }
 
-tr:nth-child(even) {
-  background-color: #f9f9f9;
+.page-header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin: 28px 0 12px;
+}
+
+/* Search */
+.search-section {
+  margin-top: 8px;
+}
+
+.search-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+#searchBox {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.2rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+}
+
+/* Filter row: four dropdowns and a button, wrapping on smaller screens */
+.filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  align-items: end;
+  margin-top: 16px;
+}
+
+.filter label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.filter select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: var(--text);
+  background-color: white;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+}
+
+.clear-button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--blue);
+  background-color: white;
+  border: 2px solid var(--blue);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  background-color: var(--light-blue);
+}
+
+/* Visible keyboard focus for accessibility */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 3px solid #f0a500;
+  outline-offset: 2px;
 }
 
 #message {
-  margin-top: 15px;
-  color: #a00;
+  color: var(--muted);
+  margin: 4px 0 12px;
+}
+
+/* Cards: as many columns as fit, at least 260px wide each */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.card dl {
+  margin: 0 0 16px;
+}
+
+.card dt {
+  float: left;
+  clear: left;
+  width: 80px;
+  font-weight: bold;
+  color: var(--muted);
+}
+
+.card dd {
+  margin: 0 0 4px 80px;
+}
+
+/* Link styled as a button; margin-top pushes it to the bottom of the card */
+.open-button {
+  margin-top: auto;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: var(--blue);
+  border-radius: 6px;
+}
+
+.open-button:hover {
+  background-color: var(--dark-blue);
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 }

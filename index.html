@@ -3,46 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Training Dashboard</title>
+  <title>Microsoft Purview Data Governance Training Hub</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Training Dashboard</h1>
+  <header class="page-header">
+    <h1>Microsoft Purview Data Governance Training Hub</h1>
+    <p class="subtitle">Find the training material you need.</p>
+  </header>
 
-  <div class="filters">
-    <input type="text" id="searchBox" placeholder="Search by employee...">
+  <main>
+    <!-- Search -->
+    <section class="search-section">
+      <label for="searchBox" class="search-label">Search training resources</label>
+      <input type="search" id="searchBox" placeholder="Search by title, topic, audience or keyword...">
+    </section>
 
-    <select id="departmentFilter">
-      <option value="">All Departments</option>
-      <option value="Finance">Finance</option>
-      <option value="IT">IT</option>
-      <option value="Legal">Legal</option>
-      <option value="HR">HR</option>
-      <option value="Operations">Operations</option>
-    </select>
+    <!-- Filters: each dropdown's value is compared with the matching CSV column -->
+    <section class="filters" aria-label="Filters">
+      <div class="filter">
+        <label for="roleFilter">Role</label>
+        <select id="roleFilter">
+          <option value="">All Roles</option>
+          <option value="Data Steward">Data Steward</option>
+          <option value="Governance Domain Owner">Governance Domain Owner</option>
+          <option value="Data Product Owner">Data Product Owner</option>
+          <option value="Data Quality Steward">Data Quality Steward</option>
+        </select>
+      </div>
 
-    <select id="statusFilter">
-      <option value="">All Statuses</option>
-      <option value="Not Started">Not Started</option>
-      <option value="In Progress">In Progress</option>
-      <option value="Completed">Completed</option>
-    </select>
-  </div>
+      <div class="filter">
+        <label for="topicFilter">Topic</label>
+        <select id="topicFilter">
+          <option value="">All Topics</option>
+          <option value="Purview Fundamentals">Purview Fundamentals</option>
+          <option value="Fabric &amp; Scanning">Fabric &amp; Scanning</option>
+          <option value="Governance Domains">Governance Domains</option>
+          <option value="Roles &amp; Permissions">Roles &amp; Permissions</option>
+          <option value="Glossary Terms">Glossary Terms</option>
+          <option value="Data Products">Data Products</option>
+          <option value="Data Quality">Data Quality</option>
+        </select>
+      </div>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Employee</th>
-        <th>Department</th>
-        <th>Course</th>
-        <th>Status</th>
-        <th>Completion Date</th>
-      </tr>
-    </thead>
-    <tbody id="trainingTable"></tbody>
-  </table>
+      <div class="filter">
+        <label for="typeFilter">Type</label>
+        <select id="typeFilter">
+          <option value="">All Types</option>
+          <option value="Course">Course</option>
+          <option value="PowerPoint">PowerPoint</option>
+          <option value="PDF Guide">PDF Guide</option>
+          <option value="Excel Template">Excel Template</option>
+          <option value="Video">Video</option>
+          <option value="Quick Reference">Quick Reference</option>
+        </select>
+      </div>
 
-  <p id="message"></p>
+      <div class="filter">
+        <label for="levelFilter">Level</label>
+        <select id="levelFilter">
+          <option value="">All Levels</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+        </select>
+      </div>
+
+      <button type="button" id="clearButton" class="clear-button">Clear Filters</button>
+    </section>
+
+    <!-- Results -->
+    <section aria-labelledby="resourcesHeading">
+      <h2 id="resourcesHeading">Training Resources</h2>
+
+      <!-- Screen readers announce changes to this text -->
+      <p id="message" role="status" aria-live="polite"></p>
+
+      <div id="cardContainer" class="card-grid"></div>
+    </section>
+  </main>
 
   <script src="app.js"></script>
 </body>

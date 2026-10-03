@@ -1,0 +1,23 @@
+Title,Topic,Audience,Type,Level,Keywords,TrainingURL
+Introduction to Microsoft Purview,Purview Fundamentals,All Users,Course,Beginner,overview;getting started;data governance;basics,#
+Data Governance Concepts Explained,Purview Fundamentals,All Users,Video,Beginner,concepts;governance;introduction;why governance,#
+Purview Navigation Quick Reference,Purview Fundamentals,All Users,Quick Reference,Beginner,navigation;portal;menu;find things,#
+Connecting Fabric to Purview,Fabric & Scanning,Data Steward,Course,Intermediate,fabric;connect;workspace;register,#
+Running Your First Scan,Fabric & Scanning,Data Steward,Video,Beginner,scan;schedule;first scan;metadata,#
+Scan Troubleshooting Guide,Fabric & Scanning,Data Steward,PDF Guide,Intermediate,scan;errors;failed;troubleshoot,#
+Setting Up a Governance Domain,Governance Domains,Governance Domain Owner,Course,Intermediate,domain;setup;create;organize,#
+Governance Domains Overview Slides,Governance Domains,All Users,PowerPoint,Beginner,domain;overview;slides;business area,#
+Domain Owner Responsibilities Checklist,Governance Domains,Governance Domain Owner,Excel Template,Beginner,checklist;responsibilities;owner;tasks,#
+Understanding Roles in Purview,Roles & Permissions,All Users,Video,Beginner,roles;access;who can do what,#
+Role Assignment Guide,Roles & Permissions,Governance Domain Owner,PDF Guide,Intermediate,assign;roles;permissions;access,#
+Permissions Quick Reference,Roles & Permissions,Data Steward,Quick Reference,Beginner,permissions;access;cheat sheet,#
+Creating Glossary Terms,Glossary Terms,Data Steward,Course,Beginner,glossary;term;create;definition,#
+Glossary Term Import Template,Glossary Terms,Data Steward,Excel Template,Beginner,glossary;import;bulk;template,#
+Writing Clear Business Definitions,Glossary Terms,All Users,PDF Guide,Intermediate,definition;writing;business terms;standards,#
+Data Products Introduction,Data Products,All Users,PowerPoint,Beginner,data product;overview;slides;concepts,#
+Publishing a Data Product,Data Products,Data Product Owner,Course,Intermediate,publish;data product;catalog;release,#
+Data Product Description Template,Data Products,Data Product Owner,Excel Template,Beginner,description;template;documentation,#
+Data Product Owner Quick Reference,Data Products,Data Product Owner,Quick Reference,Beginner,owner;responsibilities;cheat sheet,#
+Introduction to Data Quality,Data Quality,Data Quality Steward,Video,Beginner,quality;introduction;accuracy;completeness,#
+Creating Data Quality Rules,Data Quality,Data Quality Steward,Course,Intermediate,rules;quality;validation;checks,#
+Data Quality Score Quick Reference,Data Quality,Data Quality Steward,Quick Reference,Beginner,score;quality;metrics;cheat sheet,#
