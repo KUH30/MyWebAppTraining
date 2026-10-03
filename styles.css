@@ -175,6 +175,106 @@ a:focus-visible {
   background-color: var(--dark-blue);
 }
 
+/* Feedback and contact sections */
+.info-section {
+  margin-top: 40px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.info-section h2 {
+  margin-top: 16px;
+}
+
+.action-button {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: var(--blue);
+  border-radius: 6px;
+}
+
+.action-button:hover {
+  background-color: var(--dark-blue);
+}
+
+.feedback-message {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.contact-message {
+  color: var(--muted);
+}
+
+/* Contact cards: 1 column on phones, 2 on tablets, 3 at most on large screens */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 600px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .contact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 16px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+/* Initials avatar: swap for a profile photo later */
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--dark-blue);
+  background-color: var(--light-blue);
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+}
+
+.contact-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.contact-role {
+  margin: 4px 0 0;
+  font-weight: bold;
+  color: var(--muted);
+}
+
+.contact-area {
+  margin: 4px 0 16px;
+}
+
+.contact-card .action-button {
+  margin-top: auto;
+}
+
 /* Smaller screens */
 @media (max-width: 600px) {
   .page-header h1 {
