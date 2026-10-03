@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Training Dashboard</h1>
+
+  <div class="filters">
+    <input type="text" id="searchBox" placeholder="Search by employee...">
+
+    <select id="departmentFilter">
+      <option value="">All Departments</option>
+      <option value="Finance">Finance</option>
+      <option value="IT">IT</option>
+      <option value="Legal">Legal</option>
+      <option value="HR">HR</option>
+      <option value="Operations">Operations</option>
+    </select>
+
+    <select id="statusFilter">
+      <option value="">All Statuses</option>
+      <option value="Not Started">Not Started</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Completed">Completed</option>
+    </select>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Employee</th>
+        <th>Department</th>
+        <th>Course</th>
+        <th>Status</th>
+        <th>Completion Date</th>
+      </tr>
+    </thead>
+    <tbody id="trainingTable"></tbody>
+  </table>
+
+  <p id="message"></p>
+
+  <script src="app.js"></script>
+</body>
+</html>
